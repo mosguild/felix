@@ -16,6 +16,25 @@
         .table th{
             vertical-align: middle;
         }
+
+        .video-player {
+            margin: 0 auto;
+            position: relative;
+            max-width: 100%;
+        }
+
+        @media screen and (min-width: 980px){
+            .video-player {
+                min-width: 70%;
+                max-width: 90%;
+            }
+        }
+        @media screen and (min-width: 769px){
+            .video-player {
+                width: calc(100vh - 10px);
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -37,13 +56,13 @@
                 <div id="navbarMenu" class="navbar-menu">
                     <div class="navbar-end">
                         <a href="./lectures.html" class="navbar-item is-active">
-                            과정소개
+                            심전도
                         </a>
                         <a class="navbar-item">
-                            Examples
+                            초음파
                         </a>
                         <a class="navbar-item">
-                            Documentation
+                            내시경
                         </a>
               <span class="navbar-item">
                 <a class="button is-white is-outlined is-small" href="https://github.com/dansup/bulma-templates/blob/master/templates/hero.html">
@@ -65,8 +84,8 @@
 | Video layout
 |--------------------------------------------------------------------------
 |-->
-<div class="column" >
-    <div class="colum" style="margin-right: 200px;margin-left: 200px">
+<div class="column video-player" >
+    <div class="colum has-text-centered">
         <video id="my-video"
                class="video-js vjs-16-9 vjs-big-play-centered vjs-default-skin"
                controls preload="auto" width="640" height="264"
