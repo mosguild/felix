@@ -18,39 +18,42 @@
         <nav class="navbar">
             <div class="container">
                 <div class="navbar-brand">
-                    <a class="navbar-item" href="#">
+                    <a class="navbar-item" href="./index.html">
                         <img src="./resources/img/allwin.png" alt="Logo">
                     </a>
-                    <span class="navbar-burger burger" data-target="navbarMenu">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </span>
+            <span class="navbar-burger burger" data-target="navbarMenu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
                 </div>
                 <div id="navbarMenu" class="navbar-menu">
                     <div class="navbar-start">
                         <div class="navbar-item">
                             의료기기 전문교육 플랫폼
                         </div>
+                        <div class="navbar-item">
+                            <span class="tag is-link">의료기기종사자의 핵심 직무 역량 향상을 위한 동영상 교육</span>
+                        </div>
                     </div>
                     <div class="navbar-end">
-                        <a href="./lectures.html" class="navbar-item is-active">
+                        <a class="navbar-item">
                             심전도
                         </a>
-                        <a class="navbar-item">
+                        <a href="./lectures2.html" class="navbar-item is-active">
                             초음파
                         </a>
                         <a class="navbar-item">
                             내시경
                         </a>
-                        <span class="navbar-item">
-                            <a class="button is-white is-outlined is-small" href="http://allwinedu.net/">
-                              <span class="icon">
-                                <i class="fa fa-github"></i>
-                              </span>
-                                <span>올윈에듀 홈페이지</span>
-                            </a>
-                        </span>
+              <span class="navbar-item">
+                <a class="button is-white is-outlined is-small" href="http://allwinedu.net/">
+                  <span class="icon">
+                    <i class="fa fa-github"></i>
+                  </span>
+                    <span>올윈에듀 홈페이지</span>
+                </a>
+              </span>
                     </div>
                 </div>
             </div>
@@ -66,8 +69,8 @@
             </h2>
         </div>
     </div>
-
 </section>
+
 
 <div class="box cta">
     <p class="has-text-centered">
@@ -208,5 +211,33 @@
     </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        // Get all "navbar-burger" elements
+        var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+
+            // Add a click event on each of them
+            $navbarBurgers.forEach(function ($el) {
+                $el.addEventListener('click', function () {
+
+                    // Get the target from the "data-target" attribute
+                    var target = $el.dataset.target;
+                    var $target = document.getElementById(target);
+
+                    // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+                    $el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+
+                });
+            });
+        }
+
+    });
+</script>
 </body>
 </html>
