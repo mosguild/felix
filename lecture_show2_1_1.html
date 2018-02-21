@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>강의보기</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Bulma Version 0.6.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css" integrity="sha256-HEtF7HLJZSC3Le1HcsWbz1hDYFPZCqDhZa9QsCgVUdw=" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="./css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/video.js/6.7.1/video-js.css">
+    <style>
+        .table th{
+            vertical-align: middle;
+        }
+
+        .video-player {
+            margin: 0 auto;
+            position: relative;
+            max-width: 100%;
+        }
+
+        @media screen and (min-width: 980px){
+            .video-player {
+                min-width: 70%;
+                max-width: 90%;
+            }
+        }
+        @media screen and (min-width: 769px){
+            .video-player {
+                width: calc(100vh - 10px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<section class="hero is-info is-medium is-bold">
+    <div class="hero-head">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="./index.html">
+                        <img src="./resources/img/allwin.png" alt="Logo">
+                    </a>
+            <span class="navbar-burger burger" data-target="navbarMenu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+                </div>
+                <div id="navbarMenu" class="navbar-menu">
+                    <div class="navbar-start">
+                        <div class="navbar-item">
+                            의료기기 전문교육 플랫폼
+                        </div>
+                        <div class="navbar-item">
+                            <span class="tag is-link">의료기기종사자의 핵심 직무 역량 향상을 위한 동영상 교육</span>
+                        </div>
+                    </div>
+                    <div class="navbar-end">
+                        <a class="navbar-item">
+                            심전도
+                        </a>
+                        <a href="./index.html" class="navbar-item is-active">
+                            초음파
+                        </a>
+                        <a class="navbar-item">
+                            내시경
+                        </a>
+              <span class="navbar-item">
+                <a class="button is-white is-outlined is-small" href="http://allwinedu.net/">
+                  <span class="icon">
+                    <i class="fa fa-github"></i>
+                  </span>
+                    <span>올윈에듀 홈페이지</span>
+                </a>
+              </span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</section>
+
+<!--
+|--------------------------------------------------------------------------
+| Video layout
+|--------------------------------------------------------------------------
+|-->
+<div class="column video-player" >
+    <div class="colum has-text-centered">
+        <video id="my-video"
+               class="video-js vjs-16-9 vjs-big-play-centered vjs-default-skin"
+               controls preload="auto" width="640" height="264"
+               poster="./resources/img/2-1.png"
+               data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'
+        >
+            <source src="./resources/video/이론샘플.mp4" type='video/mp4'>
+            <source src="./resources/video/이론샘플.mp4" type='video/webm'>
+            <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a web browser that
+                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+        </video>
+    </div>
+
+</div>
+
+
+<!--
+|--------------------------------------------------------------------------
+| list
+|--------------------------------------------------------------------------
+|-->
+<hr>
+<div class="container">
+
+    <table class="table is-bordered is-hoverable is-fullwidth">
+        <tbody>
+        <tr>
+            <th class="is-info has-text-centered">학습기간</th>
+            <th>1개월</th>
+            <th class="is-info has-text-centered">복습기간</th>
+            <th>종료 후 3개월</th>
+        </tr>
+        <tr>
+            <th class="is-info has-text-centered">평가시험</th>
+            <th>객관식: 15문항 <br>주관식: 5문항</th>
+            <th class="is-info has-text-centered">레포트</th>
+            <th>서술형 1문항</th>
+        </tr>
+        <tr>
+            <th class="is-info has-text-centered">수료기준</th>
+            <th colspan="3">진도율 100%, 평가 + 레포트 80점 이상</th>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="columns">
+        <div class="column is-3">
+            <aside class="menu">
+
+                <p class="menu-label">
+                    의료기기 바로 알기
+                </p>
+                <ul class="menu-list">
+                    <li>
+                        <a href="./lecture_show2_1.html">샘플 홍보 영상</a>
+                        <ul>
+                            <li><a class="is-active" href="./lecture_show2_1_1.html">CH1. 초음파기기 사용의 기본</a></li>
+                            <li><a href="./lecture_show2_1_2.html">CH2. 초음파기기 사용 실습</a></li>
+                            <li><a href="./lecture_show2_1_3.html">CH3. 초음파기기 3D모델링</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+
+        <div class="column is-9">
+            <div class="box content">
+                <!--<article class="post">
+                    <h4>How to make tiles wrap with Bulma CSS?</h4>
+                    <span class="pull-right has-text-grey-light"><i class="fa fa-comments"></i> 2</span>
+                    <div class="media">
+                        <div class="media-left">
+                            <p class="image is-32x32">
+                                <img src="http://bulma.io/images/placeholders/128x128.png">
+                            </p>
+                        </div>
+                        <div class="media-content">
+                            <div class="content">
+                                <p>
+                                    <a href="#">@rapper</a> replied 3 hours ago  &nbsp;
+                                    <span class="tag">Question</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>-->
+                <div class="field">
+                    <label class="label">[학습 소감 남기기]</label>
+                    <div class="control">
+                        <textarea class="textarea" placeholder="등록된 내용이 없습니다."></textarea>
+                    </div>
+                </div>
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button is-link">완성</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/6.7.1/video.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        // Get all "navbar-burger" elements
+        var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+
+            // Add a click event on each of them
+            $navbarBurgers.forEach(function ($el) {
+                $el.addEventListener('click', function () {
+
+                    // Get the target from the "data-target" attribute
+                    var target = $el.dataset.target;
+                    var $target = document.getElementById(target);
+
+                    // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+                    $el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+
+                });
+            });
+        }
+
+    });
+</script>
+<script>
+
+</script>
+</body>
+</html>
